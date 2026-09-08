@@ -1,0 +1,5 @@
+results/*/map.pcd
+results/*/poses_*.npy
+__pycache__/
+*.pyc
+.pytest_cache/

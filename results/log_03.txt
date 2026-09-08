@@ -1,0 +1,61 @@
+[   0/815] 0s  thresh=3.00
+[ 100/815] 61s  thresh=2.00
+  loop cand 188->110 sc=0.213 fit=0.55 rmse=0.28
+  loop cand 190->110 sc=0.212 fit=0.60 rmse=0.28
+[ 200/815] 115s  thresh=2.00
+  loop cand 240->110 sc=0.196 fit=0.53 rmse=0.30
+  loop cand 242->110 sc=0.184 fit=0.59 rmse=0.30
+  loop cand 286->156 sc=0.206 fit=0.94 rmse=0.20
+[ 286] loop closure 286 -> 156  fitness=0.94
+[ 300/815] 171s  thresh=2.00
+  loop cand 330->46 sc=0.179 fit=0.90 rmse=0.20
+[ 330] loop closure 330 -> 46  fitness=0.90
+  loop cand 368->14 sc=0.219 fit=0.96 rmse=0.20
+[ 368] loop closure 368 -> 14  fitness=0.96
+[ 400/815] 230s  thresh=2.00
+  loop cand 404->122 sc=0.219 fit=0.51 rmse=0.31
+[ 500/815] 277s  thresh=2.00
+[ 600/815] 329s  thresh=2.00
+[ 700/815] 389s  thresh=2.00
+[ 800/815] 445s  thresh=2.00
+{
+ "seq": "03",
+ "frames": 815,
+ "time_s": 452.4334464073181,
+ "fps": 1.8013699174359215,
+ "odometry": {
+  "frames": 815,
+  "path_m": 3220.936251830855,
+  "ate_m": 7.644357610351194,
+  "rpe1_t_m": 0.19451914489436842,
+  "rpe1_r_deg": 0.366810618596299,
+  "end_err_m": 26.529827105836457,
+  "kitti_t_pct": 1.6749725228461414,
+  "kitti_r_deg_100m": 0.7844505495181934,
+  "kitti_segments": 566
+ },
+ "loops": 3,
+ "pgo_time_s": 0.07995891571044922,
+ "pgo": {
+  "stage1": {
+   "error_before": 1446.7597168157092,
+   "error_after": 0.08871146011214753
+  },
+  "stage2": {
+   "error_before": 0.08871146011214753,
+   "error_after": 0.08871146011214753
+  }
+ },
+ "optimized": {
+  "frames": 815,
+  "path_m": 3220.936251830855,
+  "ate_m": 7.316012272095874,
+  "rpe1_t_m": 0.1945170474935774,
+  "rpe1_r_deg": 0.36667604432819306,
+  "end_err_m": 29.80002428282278,
+  "kitti_t_pct": 1.564357180820235,
+  "kitti_r_deg_100m": 0.7495666357484065,
+  "kitti_segments": 566
+ }
+}
+done -> results/03

@@ -1,0 +1,64 @@
+[   0/221] 0s  thresh=3.00
+[ 100/221] 43s  thresh=2.00
+  loop cand 172->6 sc=0.136 fit=0.98 rmse=0.18
+[ 172] loop closure 172 -> 6  fitness=0.98
+  loop cand 174->8 sc=0.069 fit=0.93 rmse=0.20
+[ 174] loop closure 174 -> 8  fitness=0.93
+  loop cand 176->10 sc=0.145 fit=0.97 rmse=0.19
+[ 176] loop closure 176 -> 10  fitness=0.97
+  loop cand 182->16 sc=0.178 fit=0.95 rmse=0.19
+[ 182] loop closure 182 -> 16  fitness=0.95
+  loop cand 192->26 sc=0.069 fit=0.98 rmse=0.18
+[ 192] loop closure 192 -> 26  fitness=0.98
+[ 200/221] 90s  thresh=1.78
+  loop cand 204->40 sc=0.124 fit=0.97 rmse=0.18
+[ 204] loop closure 204 -> 40  fitness=0.97
+  loop cand 206->42 sc=0.059 fit=0.98 rmse=0.17
+[ 206] loop closure 206 -> 42  fitness=0.98
+  loop cand 208->44 sc=0.121 fit=0.97 rmse=0.17
+[ 208] loop closure 208 -> 44  fitness=0.97
+  loop cand 210->46 sc=0.126 fit=0.98 rmse=0.17
+[ 210] loop closure 210 -> 46  fitness=0.98
+  loop cand 212->48 sc=0.112 fit=0.98 rmse=0.18
+[ 212] loop closure 212 -> 48  fitness=0.98
+{
+ "seq": "01",
+ "frames": 221,
+ "time_s": 102.10675358772278,
+ "fps": 2.164401395938347,
+ "odometry": {
+  "frames": 221,
+  "path_m": 1232.4480547607725,
+  "ate_m": 0.6924432683039391,
+  "rpe1_t_m": 0.05464841056111637,
+  "rpe1_r_deg": 0.14500748534956096,
+  "end_err_m": 5.719530009613354,
+  "kitti_t_pct": 0.4557133479875553,
+  "kitti_r_deg_100m": 0.3038784753748358,
+  "kitti_segments": 118
+ },
+ "loops": 10,
+ "pgo_time_s": 0.018635272979736328,
+ "pgo": {
+  "stage1": {
+   "error_before": 106.30823400578902,
+   "error_after": 0.038089003539871935
+  },
+  "stage2": {
+   "error_before": 0.038089003539871935,
+   "error_after": 0.038089003539871935
+  }
+ },
+ "optimized": {
+  "frames": 221,
+  "path_m": 1232.4480547607725,
+  "ate_m": 0.5081891503575344,
+  "rpe1_t_m": 0.054635416695886334,
+  "rpe1_r_deg": 0.1450718908750999,
+  "end_err_m": 3.47241663342265,
+  "kitti_t_pct": 0.5119781736827695,
+  "kitti_r_deg_100m": 0.3046206605051637,
+  "kitti_segments": 118
+ }
+}
+done -> results/01

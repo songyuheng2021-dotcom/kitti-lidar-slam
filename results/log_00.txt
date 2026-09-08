@@ -1,0 +1,96 @@
+[   0/933] 0s  thresh=3.00
+[ 100/933] 54s  thresh=2.00
+[ 200/933] 103s  thresh=2.00
+[ 300/933] 155s  thresh=2.00
+[ 400/933] 201s  thresh=2.00
+[ 500/933] 245s  thresh=1.94
+[ 600/933] 290s  thresh=2.00
+[ 700/933] 339s  thresh=2.00
+[ 800/933] 391s  thresh=2.00
+  loop cand 840->186 sc=0.179 fit=0.94 rmse=0.20
+[ 840] loop closure 840 -> 186  fitness=0.94
+  loop cand 842->188 sc=0.102 fit=0.99 rmse=0.18
+[ 842] loop closure 842 -> 188  fitness=0.99
+  loop cand 844->190 sc=0.191 fit=0.98 rmse=0.19
+[ 844] loop closure 844 -> 190  fitness=0.98
+  loop cand 848->196 sc=0.159 fit=0.98 rmse=0.19
+[ 848] loop closure 848 -> 196  fitness=0.98
+  loop cand 850->198 sc=0.093 fit=0.99 rmse=0.19
+[ 850] loop closure 850 -> 198  fitness=0.99
+  loop cand 852->202 sc=0.132 fit=0.99 rmse=0.18
+[ 852] loop closure 852 -> 202  fitness=0.99
+  loop cand 858->196 sc=0.213 fit=0.66 rmse=0.26
+  loop cand 862->196 sc=0.209 fit=0.74 rmse=0.26
+  loop cand 882->364 sc=0.089 fit=0.98 rmse=0.19
+[ 882] loop closure 882 -> 364  fitness=0.98
+  loop cand 884->368 sc=0.116 fit=0.78 rmse=0.24
+  loop cand 886->368 sc=0.107 fit=0.91 rmse=0.23
+[ 886] loop closure 886 -> 368  fitness=0.91
+  loop cand 888->372 sc=0.107 fit=0.88 rmse=0.23
+[ 888] loop closure 888 -> 372  fitness=0.88
+  loop cand 890->374 sc=0.101 fit=0.99 rmse=0.18
+[ 890] loop closure 890 -> 374  fitness=0.99
+  loop cand 892->376 sc=0.095 fit=0.98 rmse=0.18
+[ 892] loop closure 892 -> 376  fitness=0.98
+  loop cand 894->378 sc=0.129 fit=0.99 rmse=0.18
+[ 894] loop closure 894 -> 378  fitness=0.99
+  loop cand 896->380 sc=0.059 fit=0.97 rmse=0.18
+[ 896] loop closure 896 -> 380  fitness=0.97
+  loop cand 898->382 sc=0.073 fit=0.96 rmse=0.19
+[ 898] loop closure 898 -> 382  fitness=0.96
+  loop cand 900->384 sc=0.080 fit=0.95 rmse=0.19
+[ 900] loop closure 900 -> 384  fitness=0.95
+[ 900/933] 468s  thresh=1.79
+  loop cand 902->386 sc=0.071 fit=0.93 rmse=0.22
+[ 902] loop closure 902 -> 386  fitness=0.93
+  loop cand 904->388 sc=0.073 fit=0.99 rmse=0.18
+[ 904] loop closure 904 -> 388  fitness=0.99
+  loop cand 906->390 sc=0.103 fit=0.99 rmse=0.19
+[ 906] loop closure 906 -> 390  fitness=0.99
+  loop cand 908->390 sc=0.109 fit=0.95 rmse=0.23
+[ 908] loop closure 908 -> 390  fitness=0.95
+  loop cand 910->394 sc=0.081 fit=0.98 rmse=0.20
+[ 910] loop closure 910 -> 394  fitness=0.98
+  loop cand 912->396 sc=0.106 fit=0.98 rmse=0.18
+[ 912] loop closure 912 -> 396  fitness=0.98
+{
+ "seq": "00",
+ "frames": 933,
+ "time_s": 492.7402038574219,
+ "fps": 1.8934927426177115,
+ "odometry": {
+  "frames": 933,
+  "path_m": 5065.492579022858,
+  "ate_m": 26.241878022930155,
+  "rpe1_t_m": 0.10679673253520479,
+  "rpe1_r_deg": 0.34417709831350407,
+  "end_err_m": 73.09061650875228,
+  "kitti_t_pct": 1.5102944155364961,
+  "kitti_r_deg_100m": 0.923245259469174,
+  "kitti_segments": 694
+ },
+ "loops": 21,
+ "pgo_time_s": 0.11847424507141113,
+ "pgo": {
+  "stage1": {
+   "error_before": 436904.81176153774,
+   "error_after": 431.1109195104824
+  },
+  "stage2": {
+   "error_before": 88.14900522301271,
+   "error_after": 55.21781727748145
+  }
+ },
+ "optimized": {
+  "frames": 933,
+  "path_m": 5065.492579022858,
+  "ate_m": 9.14030471926877,
+  "rpe1_t_m": 0.10678415464251399,
+  "rpe1_r_deg": 0.34313283526887384,
+  "end_err_m": 44.62795021699006,
+  "kitti_t_pct": 1.6321177304303824,
+  "kitti_r_deg_100m": 0.8520954151657202,
+  "kitti_segments": 694
+ }
+}
+done -> results/00
