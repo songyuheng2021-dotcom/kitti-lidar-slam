@@ -57,3 +57,28 @@ def test_occupancy_grid_marks_hit_and_free():
     r, c = g.cell(np.array([[5.0, 0.0]]))
     r0, c0 = g.cell(np.array([[2.0, 0.0]]))
     assert g.log_odds[r, c] > 0 and g.log_odds[r0, c0] < 0
+
+
+def test_occupancy_short_ray_is_cleared_along_its_whole_length():
+    """Regression: with a 20 m and a 5 m ray in the same scan, the 5 m ray must clear free space
+    all the way to ~4.5 m (not just its first metre), and no free cell may be hit more than once per ray."""
+    g = OccupancyGrid(-25, 25, -25, 25, res=0.5)
+    pts = np.array([[20.0, 0.0, 0.0], [0.0, 5.0, 0.0]])
+    g.integrate(np.eye(4), pts, free_every=1)
+    r, c = g.cell(np.array([[0.0, 4.0]]))          # 1 m before the 5 m hit, along +y
+    assert g.log_odds[r, c] < 0
+    r, c = g.cell(np.array([[0.0, 1.0]]))
+    assert abs(g.log_odds[r, c] - g.l_free) < 1e-5  # exactly one free update, not several
+    r, c = g.cell(np.array([[19.0, 0.0]]))
+    assert g.log_odds[r, c] < 0
+
+
+def test_verify_loops_counts_true_and_false_positives():
+    import sys, os
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+    from tools_verify_loops import verify_loops
+    gt = np.tile(np.eye(4), (4, 1, 1))
+    gt[1, :3, 3] = [3, 0, 0]; gt[2, :3, 3] = [50, 0, 0]; gt[3, :3, 3] = [52, 0, 0]
+    rows, s = verify_loops([(1, 0, 0.9, 0.1), (2, 0, 0.8, 0.2), (3, 2, 0.95, 0.05)], gt, tp_dist=10.0)
+    assert s["n_loops"] == 3 and s["n_true_positive"] == 2 and s["n_false_positive"] == 1
+    assert abs(rows[1]["gt_dist_m"] - 50.0) < 1e-9 and rows[2]["tp"]
