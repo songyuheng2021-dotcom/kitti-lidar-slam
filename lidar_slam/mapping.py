@@ -28,9 +28,13 @@ class OccupancyGrid:
         ends = pw[::free_every, :2]
         n = np.maximum(2, np.ceil(np.linalg.norm(ends - o, axis=1) / self.res).astype(int))
         nmax = n.max()
-        s = np.linspace(0, 1, nmax)[None, :, None]
+        # per-ray sample fractions k/(n_i-1): every ray is sampled at ~one cell spacing over its
+        # *own* length. (An earlier version shared one linspace over nmax samples for all rays and
+        # masked by n_i, which only cleared the first L_i^2/L_max metres of a ray of length L_i.)
+        k = np.arange(nmax)[None, :]
+        s = (k / np.maximum(n[:, None] - 1, 1))[..., None]
         ray = o[None, None, :] + (ends - o)[:, None, :] * s          # M x nmax x 2
-        valid = (np.arange(nmax)[None, :] < (n[:, None] - 1))           # exclude endpoint cell
+        valid = k < (n[:, None] - 1)                                     # exclude endpoint cell
         r, c = self.cell(ray[valid])
         np.add.at(self.log_odds, (r, c), self.l_free)
         r, c = self.cell(pw[:, :2])
